@@ -57,17 +57,17 @@ do
 class PrintWarning
 {
     public:
-        PrintWarning(std::string text_warning);
+        PrintWarning(std::string text);
         void print();
-        void setTextWarning(std::string text_warning);
-        std::string getTextWarning();
+        void setText(std::string text);
+        std::string getText();
         virtual ~PrintWarning();
         bool isFirstRun();
     protected:
     private:
         void setFirstRun(bool state);
         bool first_run;
-        std::string text_warning;
+        std::string text;
 };
 
 #endif // PRINTWARNING_H

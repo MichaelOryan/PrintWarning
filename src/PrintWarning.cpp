@@ -1,9 +1,9 @@
 #include "PrintWarning.h"
 
-PrintWarning::PrintWarning(std::string text_warning)
+PrintWarning::PrintWarning(std::string text)
 {
     setFirstRun(true);
-    setTextWarning(text_warning);
+    setText(text);
 }
 
 PrintWarning::~PrintWarning()
@@ -19,14 +19,14 @@ void PrintWarning::print()
     }
     else
     {
-        std::cout << getTextWarning() << std::endl;
+        std::cout << getText() << std::endl;
     }
 
 }
 
-void PrintWarning::setTextWarning(std::string text_warning)
+void PrintWarning::setText(std::string text)
 {
-    this->text_warning = text_warning;
+    this->text = text;
 }
 
 void PrintWarning::setFirstRun(bool state)
@@ -40,7 +40,7 @@ bool PrintWarning::isFirstRun()
     return this->first_run;
 }
 
-std::string PrintWarning::getTextWarning()
+std::string PrintWarning::getText()
 {
-    return this->text_warning;
+    return this->text;
 }
